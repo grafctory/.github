@@ -1,23 +1,22 @@
-Grafctory™ streamlines the development of data integrations, applications and AI agents powered by knowledge graphs.
+Grafctory™ streamlines the development of data services, applications and AI agents powered by knowledge graphs.
 
-Describe your domain once with a declarative linked data model and let it drive your system end to end with ready-made
-building blocks:
+Capture your domain once in a declarative linked data model and let it drive ready-made building blocks end to end:
 
-- **data ingestion** with [flow] pipelines loading and reshaping source data
-- **validation** with [blue] shapes checking both data and queries
-- **storage** with [keep] connectors generating queries and updates
-- **REST/JSON APIs** with [gate] endpoints serving [qest] client-driven queries
-- **user interfaces** with [tile] widgets for data exploration, faceted search and visualisation
-- **conversational AI** with MCP servers for agent integration and analytics _(upcoming)_
+- **validate** both data and queries with [blue] shapes
+- **store** data without hand-written queries or updates with [keep] connectors
+- **serve** client-driven JSON APIs with [qest] templates and [gate] endpoints
+- **visualise** data for exploration and faceted search with [tile] widgets
+- **connect** agents for conversational analytics with [talk] MCP servers _(upcoming)_
+- **ingest** source data with declarative concurrent [flow] pipelines
 
 Written in TypeScript, for Node.js and the browser.
 
-Grafctory™ is a trademark of [Metreeca srl][metreeca], not licensed beyond describing the origin of the work.
+<sub>Grafctory™ is a trademark of Metreeca srl.</sub>
 
-[qest]: https://github.com/grafctory/qest
 [blue]: https://github.com/grafctory/blue
 [keep]: https://github.com/grafctory/keep
+[qest]: https://github.com/grafctory/qest
 [gate]: https://github.com/grafctory/gate
-[flow]: https://github.com/grafctory/flow
 [tile]: https://github.com/grafctory/tile
-[metreeca]: https://www.metreeca.com/
+[talk]: https://github.com/grafctory/talk
+[flow]: https://github.com/grafctory/flow
