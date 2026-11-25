@@ -78,6 +78,18 @@ New packages should include the caller in their scaffold so they self-cover with
 Both the variable and secret must have visibility covering the calling repositories; `secrets: inherit` forwards the
 secret into the reusable workflow.
 
+> [!IMPORTANT]
+> On the GitHub Free plan, organisation variables and secrets reach public repositories only. A **private** repository
+> needs its own copies, under the same names, before its caller can run:
+>
+> ```bash
+> gh variable set FORWARD_APP_ID -R grafctory/<repo> --body <client-id>
+> gh secret set FORWARD_APP_KEY -R grafctory/<repo> < new-key.pem
+> ```
+>
+> There is no need to keep the PEM around for this: generate a fresh private key on the App, set it on the repository,
+> then delete the local file. The App accepts several keys at once, so the organisation key keeps working.
+
 ## Maintenance
 
 **Change the target project** — edit `project-url` in the relevant caller(s). No central change needed.
@@ -100,7 +112,7 @@ automatically once they carry a caller.
 
 | Symptom                                     | Likely cause                                                                     |
 |---------------------------------------------|----------------------------------------------------------------------------------|
-| Run fails at "Generate app token"           | `FORWARD_APP_ID` / `FORWARD_APP_KEY` missing or not visible to the repo          |
+| Run fails at "Generate app token"           | `FORWARD_APP_ID` / `FORWARD_APP_KEY` not visible (private repos need own copies) |
 | Token minted but "Forward to project" fails | App lacks `Projects: read and write`, or isn't installed on the org              |
 | No run at all on a new issue/PR             | Caller not on the repo's **default branch** yet (e.g. still only on `release/*`) |
 | Item added to the wrong board               | Caller's `project-url` points at the wrong project                               |
