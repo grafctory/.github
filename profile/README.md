@@ -9,7 +9,8 @@ Capture your domain once in a declarative linked data model and let it drive rea
 - **connect** agents for conversational analytics with [talk] MCP servers _(upcoming)_
 - **ingest** source data with declarative concurrent [flow] pipelines
 
-Written in TypeScript, for Node.js and the browser.
+TypeScript, for Node.js and the browser.\
+Open source under [Apache 2.0][apache].
 
 <sub>Grafctory™ is a trademark of Metreeca srl.</sub>
 
@@ -20,3 +21,5 @@ Written in TypeScript, for Node.js and the browser.
 [tile]: https://github.com/grafctory/tile
 [talk]: https://github.com/grafctory/talk
 [flow]: https://github.com/grafctory/flow
+
+[apache]: https://www.apache.org/licenses/LICENSE-2.0
